@@ -9,6 +9,11 @@
       "ContainerPort": "80"
     }
   ],
-  "Volumes": [],
+  "Volumes": [
+    {
+      "HostDirectory": "/app",
+      "ContainerDirectory": "/app"
+    }
+  ],
   "Logging": "/var/log/nginx"
 }
