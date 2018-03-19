@@ -1,4 +1,4 @@
-<project name="MyProject" default="build" basedir=".">
+<project name="MyProject" basedir="." default="test">
   <!-- set global properties for this build -->
 
   <target name="run-local">
@@ -20,6 +20,13 @@
       <arg value="php" />
       <arg value="./vendor/bin/codecept" />
       <arg value="run" />
+    </exec>
+  </target>
+
+  <target name="install">
+    <exec executable="composer">
+      <arg value="install" />
+      <arg value="--prefer-dist" />
     </exec>
   </target>
 </project>
