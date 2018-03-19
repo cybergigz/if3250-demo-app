@@ -5,6 +5,7 @@ phases:
         commands:
             - curl -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
             - docker-compose --version
+            - apt-get install php7.0 php7.0-cli
             - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
             - composer --version
             - composer global require phing/phing
