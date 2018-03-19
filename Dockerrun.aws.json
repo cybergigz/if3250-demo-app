@@ -1,7 +1,7 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "yiisoftware/yii2-php",
+    "Name": "yiisoftware/yii2-php:7.1-apache",
     "Update": "true"
   },
   "Ports": [
