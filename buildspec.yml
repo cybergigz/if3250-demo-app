@@ -1,22 +1,14 @@
 version: 0.2
 
-environment:
-    variables:
-        DOCKER_COMPOSE_VERSION:1.16.1
-
 phases:
     install:
         commands:
-            #Install docker compose
-            - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
-            - chmod +x docker-compose
-            - mv docker-compose /usr/local/bin
-            - docker-compose --version
+            - curl -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
 
     build:
         commands:
-            - docker-compose pull
-            - ant test
+            - ls /usr/local/bin
+            - docker-compose --version
 
 artifacts:
     type: zip
