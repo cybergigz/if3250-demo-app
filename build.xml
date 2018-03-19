@@ -1,5 +1,4 @@
 <project name="MyProject" default="build" basedir=".">
-  <description></description>
   <!-- set global properties for this build -->
 
   <target name="run-local">
