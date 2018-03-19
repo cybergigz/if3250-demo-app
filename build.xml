@@ -1,0 +1,26 @@
+<project name="MyProject" default="build" basedir=".">
+  <description></description>
+  <!-- set global properties for this build -->
+
+  <target name="run-local">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <exec executable="docker-compose">
+        <arg value="up" />
+    </exec>
+  </target>
+
+
+  <target name="test">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <exec executable="docker-compose">
+      <arg value="run" />
+      <arg value="php" />
+      <arg value="./vendor/bin/codecept" />
+      <arg value="run" />
+    </exec>
+  </target>
+</project>
