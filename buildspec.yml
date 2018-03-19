@@ -10,7 +10,7 @@ phases:
 
     build:
         commands:
-            - phing test
+            - phing test -verbose
 
 artifacts:
     type: zip
